@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Calculator Emulator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@rive-app/canvas@latest"></script>
+</head>
+<body>
+
+    <div class="calculator-container">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <script>
+        // Initialize Rive
+        const r = new rive.Rive({
+            src: 'calculator.riv', // Ensure this matches your filename!
+            canvas: document.getElementById('canvas'),
+            autoplay: true,
+            stateMachines: 'State Machine 1', // Ensure this matches your Rive State Machine name
+            onLoad: () => {
+                r.resizeDrawingSurfaceToCanvas();
+            },
+        });
+    </script>
+</body>
+</html>
